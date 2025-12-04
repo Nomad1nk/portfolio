@@ -211,24 +211,24 @@ export default function Portfolio() {
   const t = translations[lang];
 
   return (
-    <div className="min-h-screen font-sans selection:bg-gray-300 bg-gradient-to-br from-white via-gray-100 to-slate-200 animate-gradient-xy text-slate-900">
+    <div className="min-h-screen font-sans selection:bg-gray-700 bg-gradient-to-br from-gray-950 via-slate-900 to-black animate-gradient-xy text-gray-200">
 
       {/* --- NAV / HERO SECTION --- */}
-      <header className="bg-white/80 border-b border-gray-200 sticky top-0 z-50 backdrop-blur-md">
+      <header className="bg-black/50 border-b border-white/10 sticky top-0 z-50 backdrop-blur-md">
         <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="font-bold text-xl tracking-tight text-black">Nomad<span className="text-gray-500">.Dev</span></div>
-          <nav className="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
-            <a href="#about" className="hover:text-black transition">{t.nav.about}</a>
-            <a href="#projects" className="hover:text-black transition">{t.nav.projects}</a>
-            <a href="#skills" className="hover:text-black transition">{t.nav.stack}</a>
-            <a href="#contact" className="hover:text-black transition">{t.nav.contact}</a>
+          <div className="font-bold text-xl tracking-tight text-white">Nomad<span className="text-gray-400">.Dev</span></div>
+          <nav className="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
+            <a href="#about" className="hover:text-white transition">{t.nav.about}</a>
+            <a href="#projects" className="hover:text-white transition">{t.nav.projects}</a>
+            <a href="#skills" className="hover:text-white transition">{t.nav.stack}</a>
+            <a href="#contact" className="hover:text-white transition">{t.nav.contact}</a>
           </nav>
 
           <div className="flex items-center gap-4">
 
             {/* Hover Language Switcher */}
             <div className="relative group">
-              <button className="flex items-center gap-1 text-sm font-bold text-gray-700 hover:text-black transition px-2 py-1 rounded-md">
+              <button className="flex items-center gap-1 text-sm font-bold text-gray-300 hover:text-white transition px-2 py-1 rounded-md">
                 <Globe size={16} />
                 <span className="uppercase">{lang}</span>
                 <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
@@ -236,22 +236,22 @@ export default function Portfolio() {
 
               {/* Dropdown Menu */}
               <div className="absolute right-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-right z-50">
-                <div className="bg-white border border-gray-200 rounded-lg shadow-xl overflow-hidden min-w-[120px] flex flex-col">
+                <div className="bg-gray-900 border border-white/10 rounded-lg shadow-xl overflow-hidden min-w-[120px] flex flex-col">
                   {(['en', 'jp', 'de', 'mn'] as const).map((l) => (
                     <button
                       key={l}
                       onClick={() => setLang(l)}
-                      className={`px-4 py-2 text-left text-sm font-medium hover:bg-gray-50 transition flex items-center justify-between ${lang === l ? 'text-black bg-gray-100 font-bold' : 'text-gray-600'}`}
+                      className={`px-4 py-2 text-left text-sm font-medium hover:bg-white/10 transition flex items-center justify-between ${lang === l ? 'text-white bg-white/5 font-bold' : 'text-gray-400'}`}
                     >
                       <span className="uppercase">{l}</span>
-                      {lang === l && <div className="w-1.5 h-1.5 rounded-full bg-black"></div>}
+                      {lang === l && <div className="w-1.5 h-1.5 rounded-full bg-white"></div>}
                     </button>
                   ))}
                 </div>
               </div>
             </div>
 
-            <a href="/MainRirekiSho.xlsx" className="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition shadow-lg shadow-gray-200">
+            <a href="/MainRirekiSho.xlsx" className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 transition shadow-lg shadow-white/5">
               <Download size={16} />
               <span className="hidden sm:inline">{t.cv}</span>
             </a>
@@ -263,24 +263,24 @@ export default function Portfolio() {
         {/* --- HERO --- */}
         <section id="about" className="pt-20 pb-32 px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 text-gray-800 text-xs font-bold uppercase tracking-wide mb-6 border border-gray-200">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 text-gray-300 text-xs font-bold uppercase tracking-wide mb-6 border border-white/10">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gray-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-gray-600"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-20"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
               </span>
               {t.hero.openToWork}
             </div>
-            <h1 className="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">
-              {t.hero.titlePrefix} <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-black">{t.hero.titleHighlight}</span> {t.hero.titleSuffix}
+            <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight mb-6">
+              {t.hero.titlePrefix} <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-white">{t.hero.titleHighlight}</span> {t.hero.titleSuffix}
             </h1>
-            <p className="text-lg text-slate-600 mb-10 leading-relaxed">
+            <p className="text-lg text-gray-400 mb-10 leading-relaxed">
               {t.hero.description}
             </p>
             <div className="flex justify-center gap-4">
-              <a href="#contact" className="px-6 py-3 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition shadow-xl shadow-gray-200">
+              <a href="#contact" className="px-6 py-3 bg-white text-black rounded-lg font-semibold hover:bg-gray-200 transition shadow-xl shadow-white/10">
                 {t.hero.contact}
               </a>
-              <a href="https://github.com/nomad1nk" target="_blank" rel="noreferrer" className="px-6 py-3 bg-white text-slate-800 border border-gray-200 rounded-lg font-semibold hover:bg-gray-50 transition flex items-center gap-2">
+              <a href="https://github.com/nomad1nk" target="_blank" rel="noreferrer" className="px-6 py-3 bg-transparent text-white border border-white/20 rounded-lg font-semibold hover:bg-white/10 transition flex items-center gap-2">
                 <Github size={20} />
                 {t.hero.github}
               </a>
@@ -289,23 +289,23 @@ export default function Portfolio() {
         </section>
 
         {/* --- FEATURED PROJECTS --- */}
-        <section id="projects" className="py-20 bg-white/40 backdrop-blur-sm border-y border-white/50">
+        <section id="projects" className="py-20 bg-black/20 backdrop-blur-sm border-y border-white/5">
           <div className="max-w-5xl mx-auto px-6 space-y-24">
-            <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-8 border-b border-gray-200 pb-2 inline-block">{t.projects.title}</h2>
+            <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-8 border-b border-white/10 pb-2 inline-block">{t.projects.title}</h2>
 
             {/* PROJECT 1: EcoRoute */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <h3 className="text-3xl font-bold text-slate-900">{t.projects.p1.title}</h3>
-                <div className="prose text-slate-600">
+                <h3 className="text-3xl font-bold text-white">{t.projects.p1.title}</h3>
+                <div className="prose text-gray-400">
                   <p>{t.projects.p1.desc}</p>
                   <ul className="space-y-2 mt-4">
                     <li className="flex items-start gap-3">
-                      <span className="bg-gray-100 p-1 rounded text-gray-800 mt-1"><CheckIcon /></span>
+                      <span className="bg-white/10 p-1 rounded text-white mt-1"><CheckIcon /></span>
                       <span>{t.projects.p1.feat1}</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="bg-gray-100 p-1 rounded text-gray-800 mt-1"><CheckIcon /></span>
+                      <span className="bg-white/10 p-1 rounded text-white mt-1"><CheckIcon /></span>
                       <span>{t.projects.p1.feat2}</span>
                     </li>
                   </ul>
@@ -317,14 +317,14 @@ export default function Portfolio() {
                   <TechBadge icon={MapPin} label="Leaflet / OSRM" />
                 </div>
               </div>
-              <div className="bg-white rounded-2xl p-4 border border-gray-200 shadow-xl rotate-1 hover:rotate-0 transition duration-500 grayscale hover:grayscale-0">
-                <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden relative border border-gray-100">
+              <div className="bg-white/5 rounded-2xl p-4 border border-white/10 shadow-2xl rotate-1 hover:rotate-0 transition duration-500">
+                <div className="aspect-video bg-gray-900 rounded-lg flex items-center justify-center overflow-hidden relative border border-white/5">
                   <img
                     src="/ecoroute.png"
                     alt="EcoRoute Dashboard Interface"
-                    className="object-cover w-full h-full opacity-90 hover:opacity-100 transition duration-500 hover:scale-105"
+                    className="object-cover w-full h-full opacity-80 hover:opacity-100 transition duration-500 hover:scale-105"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4">
                     <p className="text-white font-medium text-sm">Live Map Dashboard View</p>
                   </div>
                 </div>
@@ -333,27 +333,27 @@ export default function Portfolio() {
 
             {/* PROJECT 2: Virtual Mouse */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="order-2 md:order-1 bg-white rounded-2xl p-4 border border-gray-200 shadow-xl -rotate-1 hover:rotate-0 transition duration-500 grayscale hover:grayscale-0">
-                <div className="aspect-video bg-gray-50 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-200 overflow-hidden">
+              <div className="order-2 md:order-1 bg-white/5 rounded-2xl p-4 border border-white/10 shadow-2xl -rotate-1 hover:rotate-0 transition duration-500">
+                <div className="aspect-video bg-gray-900 rounded-lg flex items-center justify-center border-2 border-dashed border-white/10 overflow-hidden">
                   <img
                     src="/virtualmouse.png"
                     alt="AI Hand Gesture Recognition"
-                    className="object-cover w-full h-full opacity-90 hover:opacity-100 transition duration-500 hover:scale-105"
+                    className="object-cover w-full h-full opacity-80 hover:opacity-100 transition duration-500 hover:scale-105"
                   />
                 </div>
               </div>
 
               <div className="order-1 md:order-2 space-y-6">
-                <h3 className="text-3xl font-bold text-slate-900">{t.projects.p2.title}</h3>
-                <div className="prose text-slate-600">
+                <h3 className="text-3xl font-bold text-white">{t.projects.p2.title}</h3>
+                <div className="prose text-gray-400">
                   <p>{t.projects.p2.desc}</p>
                   <ul className="space-y-2 mt-4">
                     <li className="flex items-start gap-3">
-                      <span className="bg-gray-100 p-1 rounded text-gray-800 mt-1"><CheckIcon /></span>
+                      <span className="bg-white/10 p-1 rounded text-white mt-1"><CheckIcon /></span>
                       <span>{t.projects.p2.feat1}</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="bg-gray-100 p-1 rounded text-gray-800 mt-1"><CheckIcon /></span>
+                      <span className="bg-white/10 p-1 rounded text-white mt-1"><CheckIcon /></span>
                       <span>{t.projects.p2.feat2}</span>
                     </li>
                   </ul>
@@ -367,7 +367,7 @@ export default function Portfolio() {
                 </div>
 
                 <div className="pt-4">
-                  <a href="https://github.com/Nomad1nk/mouseTrack" target="_blank" rel="noreferrer" className="inline-flex items-center text-black font-bold hover:text-gray-600 border-b-2 border-black hover:border-gray-600 pb-0.5 transition-colors">
+                  <a href="https://github.com/Nomad1nk/mouseTrack" target="_blank" rel="noreferrer" className="inline-flex items-center text-white font-bold hover:text-gray-300 border-b-2 border-white hover:border-gray-300 pb-0.5 transition-colors">
                     {t.projects.viewCode} <ExternalLink size={16} className="ml-1" />
                   </a>
                 </div>
@@ -378,18 +378,18 @@ export default function Portfolio() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <div className="flex items-center gap-3">
-                  <h3 className="text-3xl font-bold text-slate-900">{t.projects.p3.title}</h3>
-                  <span className="px-3 py-1 bg-gray-100 text-gray-800 text-xs font-bold uppercase tracking-wide rounded-full border border-gray-300">{t.projects.p3.status}</span>
+                  <h3 className="text-3xl font-bold text-white">{t.projects.p3.title}</h3>
+                  <span className="px-3 py-1 bg-white/10 text-white text-xs font-bold uppercase tracking-wide rounded-full border border-white/20">{t.projects.p3.status}</span>
                 </div>
-                <div className="prose text-slate-600">
+                <div className="prose text-gray-400">
                   <p>{t.projects.p3.desc}</p>
                   <ul className="space-y-2 mt-4">
                     <li className="flex items-start gap-3">
-                      <span className="bg-gray-100 p-1 rounded text-gray-800 mt-1"><CheckIcon /></span>
+                      <span className="bg-white/10 p-1 rounded text-white mt-1"><CheckIcon /></span>
                       <span>{t.projects.p3.feat1}</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="bg-gray-100 p-1 rounded text-gray-800 mt-1"><CheckIcon /></span>
+                      <span className="bg-white/10 p-1 rounded text-white mt-1"><CheckIcon /></span>
                       <span>{t.projects.p3.feat2}</span>
                     </li>
                   </ul>
@@ -401,12 +401,12 @@ export default function Portfolio() {
                   <TechBadge icon={Sparkles} label="Next.js" />
                 </div>
               </div>
-              <div className="bg-white rounded-2xl p-4 border border-gray-200 shadow-xl rotate-1 hover:rotate-0 transition duration-500 grayscale hover:grayscale-0">
-                <div className="aspect-video bg-gray-50 rounded-lg flex items-center justify-center border-2 border-dashed border-gray-200 overflow-hidden">
+              <div className="bg-white/5 rounded-2xl p-4 border border-white/10 shadow-2xl rotate-1 hover:rotate-0 transition duration-500">
+                <div className="aspect-video bg-gray-900 rounded-lg flex items-center justify-center border-2 border-dashed border-white/10 overflow-hidden">
                   <img
                     src="/syncAI.png"
                     alt="AI Chat Interface"
-                    className="object-cover w-full h-full opacity-90 hover:opacity-100 transition duration-500 hover:scale-105"
+                    className="object-cover w-full h-full opacity-80 hover:opacity-100 transition duration-500 hover:scale-105"
                   />
                 </div>
               </div>
@@ -414,30 +414,30 @@ export default function Portfolio() {
 
             {/* PROJECT 4: LuxeCart eCommerce (NEW) */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="order-2 md:order-1 bg-white rounded-2xl p-4 border border-gray-200 shadow-xl -rotate-1 hover:rotate-0 transition duration-500 grayscale hover:grayscale-0">
-                <div className="aspect-video bg-black rounded-lg flex items-center justify-center border-2 border-dashed border-gray-700 overflow-hidden">
+              <div className="order-2 md:order-1 bg-white/5 rounded-2xl p-4 border border-white/10 shadow-2xl -rotate-1 hover:rotate-0 transition duration-500">
+                <div className="aspect-video bg-black rounded-lg flex items-center justify-center border-2 border-dashed border-gray-800 overflow-hidden">
                   <img
                     src="/ecommerce.png"
                     alt="LuxeCart eCommerce Interface"
-                    className="object-cover w-full h-full opacity-90 hover:opacity-100 transition duration-500 hover:scale-105"
+                    className="object-cover w-full h-full opacity-80 hover:opacity-100 transition duration-500 hover:scale-105"
                   />
                 </div>
               </div>
 
               <div className="order-1 md:order-2 space-y-6">
                 <div className="flex items-center gap-3">
-                  <h3 className="text-3xl font-bold text-slate-900">{t.projects.p4.title}</h3>
-                  <span className="px-3 py-1 bg-black text-white text-xs font-bold uppercase tracking-wide rounded-full border border-gray-800">{t.projects.p4.status}</span>
+                  <h3 className="text-3xl font-bold text-white">{t.projects.p4.title}</h3>
+                  <span className="px-3 py-1 bg-white text-black text-xs font-bold uppercase tracking-wide rounded-full border border-gray-200">{t.projects.p4.status}</span>
                 </div>
-                <div className="prose text-slate-600">
+                <div className="prose text-gray-400">
                   <p>{t.projects.p4.desc}</p>
                   <ul className="space-y-2 mt-4">
                     <li className="flex items-start gap-3">
-                      <span className="bg-gray-100 p-1 rounded text-gray-800 mt-1"><CheckIcon /></span>
+                      <span className="bg-white/10 p-1 rounded text-white mt-1"><CheckIcon /></span>
                       <span>{t.projects.p4.feat1}</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="bg-gray-100 p-1 rounded text-gray-800 mt-1"><CheckIcon /></span>
+                      <span className="bg-white/10 p-1 rounded text-white mt-1"><CheckIcon /></span>
                       <span>{t.projects.p4.feat2}</span>
                     </li>
                   </ul>
@@ -451,7 +451,7 @@ export default function Portfolio() {
                 </div>
 
                 <div className="pt-4">
-                  <a href="#" className="inline-flex items-center text-black font-bold hover:text-gray-600 border-b-2 border-black hover:border-gray-600 pb-0.5 transition-colors">
+                  <a href="#" className="inline-flex items-center text-white font-bold hover:text-gray-300 border-b-2 border-white hover:border-gray-300 pb-0.5 transition-colors">
                     {t.projects.viewCode} <ExternalLink size={16} className="ml-1" />
                   </a>
                 </div>
@@ -464,7 +464,7 @@ export default function Portfolio() {
         {/* --- TECH STACK --- */}
         <section id="skills" className="py-20 px-6">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">{t.skills.title}</h2>
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">{t.skills.title}</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <SkillCard title="Frontend" skills={["React / Next.js", "TypeScript", "Tailwind CSS", "Leaflet.js"]} />
               <SkillCard title="Backend" skills={["Ruby on Rails", "Python (Flask)", "Node.js", "REST APIs"]} />
@@ -475,10 +475,10 @@ export default function Portfolio() {
         </section>
 
         {/* --- FOOTER / CONTACT --- */}
-        <footer id="contact" className="bg-black text-gray-400 py-20 px-6">
+        <footer id="contact" className="bg-black text-gray-500 py-20 px-6 border-t border-white/10">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="text-3xl font-bold text-white">{t.footer.title}</h2>
-            <p className="text-lg text-gray-500">
+            <p className="text-lg text-gray-400">
               {t.footer.desc}
             </p>
             <div className="flex justify-center gap-6">
@@ -492,7 +492,7 @@ export default function Portfolio() {
                 <Github size={20} /> GitHub
               </a>
             </div>
-            <div className="border-t border-gray-800 pt-8 mt-12 text-sm text-gray-600">
+            <div className="border-t border-white/10 pt-8 mt-12 text-sm text-gray-600">
               <p>&copy; {new Date().getFullYear()} Nomad. {t.footer.rights}</p>
               <p className="mt-2">{t.footer.imprint}</p>
             </div>
@@ -507,7 +507,7 @@ export default function Portfolio() {
 
 function TechBadge({ icon: Icon, label }: { icon: any, label: string }) {
   return (
-    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white text-gray-800 text-xs font-semibold border border-gray-200 shadow-sm">
+    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/5 text-gray-300 text-xs font-semibold border border-white/10 shadow-sm">
       <Icon size={14} />
       {label}
     </span>
@@ -516,12 +516,12 @@ function TechBadge({ icon: Icon, label }: { icon: any, label: string }) {
 
 function SkillCard({ title, skills }: { title: string, skills: string[] }) {
   return (
-    <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition duration-300">
-      <h3 className="font-bold text-black mb-4 border-b border-gray-100 pb-2">{title}</h3>
+    <div className="bg-white/5 p-6 rounded-xl border border-white/10 shadow-sm hover:shadow-lg transition duration-300 hover:bg-white/10">
+      <h3 className="font-bold text-white mb-4 border-b border-white/10 pb-2">{title}</h3>
       <ul className="space-y-2">
         {skills.map((skill) => (
-          <li key={skill} className="text-sm text-gray-600 flex items-center gap-2">
-            <div className="w-1.5 h-1.5 rounded-full bg-black"></div>
+          <li key={skill} className="text-sm text-gray-400 flex items-center gap-2">
+            <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
             {skill}
           </li>
         ))}
