@@ -218,6 +218,7 @@ export default function Portfolio() {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-blob"></div>
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-gray-500/10 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
         <div className="absolute -bottom-32 left-1/3 w-96 h-96 bg-slate-500/10 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+        <Bubbles />
       </div>
 
       <div className="relative z-10">
@@ -544,4 +545,35 @@ function CheckIcon() {
   return (
     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg>
   )
+}
+
+function Bubbles() {
+  // Generate random bubbles
+  const bubbles = Array.from({ length: 15 }).map((_, i) => ({
+    id: i,
+    left: `${Math.random() * 100}%`,
+    animationDuration: `${15 + Math.random() * 15}s`,
+    animationDelay: `${Math.random() * 5}s`,
+    opacity: 0.1 + Math.random() * 0.2,
+    size: `${4 + Math.random() * 6}px`
+  }));
+
+  return (
+    <div className="absolute inset-0 w-full h-full pointer-events-none">
+      {bubbles.map((b) => (
+        <div
+          key={b.id}
+          className="absolute bottom-0 rounded-full bg-white animate-rise"
+          style={{
+            left: b.left,
+            width: b.size,
+            height: b.size,
+            opacity: b.opacity,
+            animationDuration: b.animationDuration,
+            animationDelay: b.animationDelay,
+          }}
+        ></div>
+      ))}
+    </div>
+  );
 }
