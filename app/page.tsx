@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Github, Linkedin, Mail, MapPin, ExternalLink, Download, Database, Layout, Server, Cpu, Camera, Eye, MousePointer2, Brain, MessageSquare, Sparkles, Globe, ChevronDown } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, ExternalLink, Download, Database, Layout, Server, Cpu, Camera, Eye, MousePointer2, Brain, MessageSquare, Sparkles, Globe, ChevronDown, ShoppingBag, CreditCard } from 'lucide-react';
 
 const translations = {
   en: {
@@ -35,6 +35,13 @@ const translations = {
         desc: "An empathetic AI companion designed for deep psychological context retention. It utilizes Vector Memory to maintain \"perfect sync\" with the user's long-term history and emotional state.",
         feat1: "RAG Architecture: Retrieval-Augmented Generation using vector embeddings to recall past conversations accurately.",
         feat2: "Emotional Alignment: System prompts tuned for psychological support modalities (CBT/DBT principles)."
+      },
+      p4: {
+        title: "LuxeCart eCommerce",
+        status: "Completed",
+        desc: "A high-performance headless eCommerce platform designed for luxury retail. Features a seamless checkout experience, real-time inventory management, and AI-driven product recommendations.",
+        feat1: "Headless Architecture: Decoupled frontend (Next.js) and backend (Shopify API) for maximum flexibility and speed.",
+        feat2: "Global Payments: Integrated Stripe and PayPal for secure, multi-currency transactions."
       },
       viewCode: "View Code on GitHub"
     },
@@ -79,6 +86,13 @@ const translations = {
         feat1: "RAGアーキテクチャ: ベクトル埋め込みを使用した検索拡張生成により、過去の会話を正確に想起。",
         feat2: "感情調整: 心理的サポートのモダリティ(CBT/DBTの原則)に合わせて調整されたシステムプロンプト。"
       },
+      p4: {
+        title: "LuxeCart eCommerce",
+        status: "完了",
+        desc: "高級小売向けに設計された高性能ヘッドレスeコマースプラットフォーム。シームレスなチェックアウト体験、リアルタイムの在庫管理、AI主導の製品推奨機能を備えています。",
+        feat1: "ヘッドレスアーキテクチャ: 柔軟性と速度を最大化するための分離されたフロントエンド(Next.js)とバックエンド(Shopify API)。",
+        feat2: "グローバル決済: 安全な多通貨取引のためにStripeとPayPalを統合。"
+      },
       viewCode: "GitHubでコードを見る"
     },
     skills: { title: "技術コンピテンシー" },
@@ -122,6 +136,13 @@ const translations = {
         feat1: "RAG-Architektur: Retrieval-Augmented Generation unter Verwendung von Vektoreinbettungen, um vergangene Gespräche genau abzurufen.",
         feat2: "Emotionale Ausrichtung: System-Prompts, die auf psychologische Unterstützungsmodalitäten (CBT/DBT-Prinzipien) abgestimmt sind."
       },
+      p4: {
+        title: "LuxeCart eCommerce",
+        status: "Abgeschlossen",
+        desc: "Eine leistungsstarke Headless-E-Commerce-Plattform für den Luxuseinzelhandel. Bietet ein nahtloses Checkout-Erlebnis, Bestandsmanagement in Echtzeit und KI-gesteuerte Produktempfehlungen.",
+        feat1: "Headless-Architektur: Entkoppeltes Frontend (Next.js) und Backend (Shopify API) für maximale Flexibilität und Geschwindigkeit.",
+        feat2: "Globale Zahlungen: Integrierte Stripe und PayPal für sichere Transaktionen in mehreren Währungen."
+      },
       viewCode: "Code auf GitHub ansehen"
     },
     skills: { title: "Technische Kompetenzen" },
@@ -164,6 +185,13 @@ const translations = {
         desc: "Сэтгэл зүйн гүн гүнзгий контекстийг хадгалахад зориулагдсан эмпатик AI хамтрагч. Вектор санах ой ашиглан хэрэглэгчийн урт хугацааны түүх болон сэтгэл хөдлөлийн байдалтай \"төгс синхрончлол\"-ыг хадгалдаг.",
         feat1: "RAG Архитектур: Өнгөрсөн харилцан яриаг нарийн санахын тулд вектор шигтгээ ашиглан Retrieval-Augmented Generation хийдэг.",
         feat2: "Сэтгэл хөдлөлийн тохируулга: Сэтгэл зүйн дэмжлэг үзүүлэх аргууд (CBT/DBT зарчим)-д тохируулсан системийн промптууд."
+      },
+      p4: {
+        title: "LuxeCart eCommerce",
+        status: "Дууссан",
+        desc: "Тансаг зэрэглэлийн жижиглэн худалдаанд зориулагдсан өндөр гүйцэтгэлтэй headless eCommerce платформ. Төлбөр тооцооны саадгүй туршлага, бодит цагийн бараа материалын менежмент, AI-д суурилсан бүтээгдэхүүний зөвлөмжийг агуулсан.",
+        feat1: "Headless Архитектур: Уян хатан байдал, хурдыг дээд зэргээр нэмэгдүүлэхийн тулд салгагдсан frontend (Next.js) болон backend (Shopify API).",
+        feat2: "Дэлхийн төлбөр тооцоо: Олон валютын гүйлгээг найдвартай хийхийн тулд Stripe болон PayPal-г нэгтгэсэн."
       },
       viewCode: "GitHub дээр код үзэх"
     },
@@ -380,6 +408,52 @@ export default function Portfolio() {
                     alt="AI Chat Interface"
                     className="object-cover w-full h-full opacity-90 hover:opacity-100 transition duration-500 hover:scale-105"
                   />
+                </div>
+              </div>
+            </div>
+
+            {/* PROJECT 4: LuxeCart eCommerce (NEW) */}
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-2 md:order-1 bg-slate-100 rounded-2xl p-4 border border-slate-200 shadow-xl -rotate-1 hover:rotate-0 transition duration-500">
+                <div className="aspect-video bg-slate-900 rounded-lg flex items-center justify-center border-2 border-dashed border-slate-700 overflow-hidden">
+                  <img
+                    src="/ecommerce.png"
+                    alt="LuxeCart eCommerce Interface"
+                    className="object-cover w-full h-full opacity-90 hover:opacity-100 transition duration-500 hover:scale-105"
+                  />
+                </div>
+              </div>
+
+              <div className="order-1 md:order-2 space-y-6">
+                <div className="flex items-center gap-3">
+                  <h3 className="text-3xl font-bold text-slate-900">{t.projects.p4.title}</h3>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wide rounded-full border border-emerald-200">{t.projects.p4.status}</span>
+                </div>
+                <div className="prose text-slate-600">
+                  <p>{t.projects.p4.desc}</p>
+                  <ul className="space-y-2 mt-4">
+                    <li className="flex items-start gap-3">
+                      <span className="bg-emerald-100 p-1 rounded text-emerald-600 mt-1"><CheckIcon /></span>
+                      <span>{t.projects.p4.feat1}</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="bg-emerald-100 p-1 rounded text-emerald-600 mt-1"><CheckIcon /></span>
+                      <span>{t.projects.p4.feat2}</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="flex flex-wrap gap-2 pt-4">
+                  <TechBadge icon={Layout} label="Next.js" />
+                  <TechBadge icon={ShoppingBag} label="Shopify API" />
+                  <TechBadge icon={CreditCard} label="Stripe" />
+                  <TechBadge icon={Database} label="Redis" />
+                </div>
+
+                <div className="pt-4">
+                  <a href="#" className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800">
+                    {t.projects.viewCode} <ExternalLink size={16} className="ml-1" />
+                  </a>
                 </div>
               </div>
             </div>
