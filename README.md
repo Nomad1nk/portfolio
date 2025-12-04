@@ -24,7 +24,7 @@ A modern, responsive portfolio website built with **Next.js 14**, **Tailwind CSS
 A sustainable logistics platform that reduces carbon emissions by optimizing delivery routes using real-world physics and traffic data.
 - **Stack:** Next.js, Ruby on Rails, Python (Flask), OSRM.
 
-### 2. AI Virtual Mouse & Eye Tracker
+### 2. Virtual Mouse & Eye Tracker
 A hands-free HCI system enabling touchless control using computer vision to translate gestures into precise cursor actions.
 - **Stack:** Python, OpenCV, MediaPipe, PyAutoGUI.
 
