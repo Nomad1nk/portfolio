@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Github, Linkedin, Mail, MapPin, ExternalLink, Download, Database, Layout, Server, Cpu, Camera, Eye, MousePointer2, Brain, MessageSquare, Sparkles } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, ExternalLink, Download, Database, Layout, Server, Cpu, Camera, Eye, MousePointer2, Brain, MessageSquare, Sparkles, Globe, ChevronDown } from 'lucide-react';
 
 const translations = {
   en: {
@@ -132,11 +132,54 @@ const translations = {
       imprint: "Impressum | Datenschutz"
     },
     cv: "Lebenslauf herunterladen"
+  },
+  mn: {
+    nav: { about: "Тухай", projects: "Төслүүд", stack: "Технологи", contact: "Холбоо барих" },
+    hero: {
+      openToWork: "Ажилд ороход бэлэн",
+      titlePrefix: "Өргөтгөх боломжтой",
+      titleHighlight: "Микросервис",
+      titleSuffix: "ба AI шийдлүүд.",
+      description: "Би Япон улсад суурилсан Full-Stack хөгжүүлэгч бөгөөд Next.js, Ruby on Rails, болон Applied AI чиглэлээр мэргэшсэн. Би академик мэдлэгээ практик инженерийн ур чадвартай хослуулан ложистик, харилцан үйлчлэл, танин мэдэхүйн бодит асуудлуудыг шийдвэрлэх системүүдийг бүтээдэг.",
+      contact: "Надтай холбогдох",
+      github: "GitHub"
+    },
+    projects: {
+      title: "Онцлох төслүүд",
+      p1: {
+        title: "EcoRoute Optimizer",
+        desc: "Бодит физик болон замын хөдөлгөөний өгөгдлийг ашиглан хүргэлтийн маршрутыг оновчтой болгож, нүүрстөрөгчийн ялгарлыг бууруулдаг тогтвортой ложистикийн платформ.",
+        feat1: "Микросервис архитектур: Логик (Python), Удирдлага (Rails), болон UI (Next.js)-д зориулсан тусдаа үйлчилгээнүүд.",
+        feat2: "Бодит маршрутчлал: OSRM-ийг нэгтгэн замын нарийн геометр болон хөдөлгөөнд тохируулсан аялах хугацааг тооцоолдог."
+      },
+      p2: {
+        title: "Virtual Mouse & Eye Tracker",
+        desc: "Компьютерийн хараа ашиглан дохио зангааг курсорын нарийн үйлдэл болгон хувиргаж, хүрэлцэхгүйгээр удирдах боломжийг олгодог гар ашиглахгүй HCI систем.",
+        feat1: "Дохио таних: Хурууны үзүүрийг хянах болон нүдээ цавчих замаар хулганы товшилт, гүйлгэх үйлдлийг удирддаг.",
+        feat2: "Оновчтой гүйцэтгэл: OpenCV болон MediaPipe ашиглан бүтээгдсэн бөгөөд энгийн CPU дээр өндөр FPS-тэй бодит цагийн боловсруулалт хийдэг."
+      },
+      p3: {
+        title: "MindSync AI",
+        status: "Хөгжүүлэлтийн шатанд",
+        desc: "Сэтгэл зүйн гүн гүнзгий контекстийг хадгалахад зориулагдсан эмпатик AI хамтрагч. Вектор санах ой ашиглан хэрэглэгчийн урт хугацааны түүх болон сэтгэл хөдлөлийн байдалтай \"төгс синхрончлол\"-ыг хадгалдаг.",
+        feat1: "RAG Архитектур: Өнгөрсөн харилцан яриаг нарийн санахын тулд вектор шигтгээ ашиглан Retrieval-Augmented Generation хийдэг.",
+        feat2: "Сэтгэл хөдлөлийн тохируулга: Сэтгэл зүйн дэмжлэг үзүүлэх аргууд (CBT/DBT зарчим)-д тохируулсан системийн промптууд."
+      },
+      viewCode: "GitHub дээр код үзэх"
+    },
+    skills: { title: "Техникийн ур чадвар" },
+    footer: {
+      title: "Өөрчлөлт хийхэд бэлэн.",
+      desc: "Би идэвхтэй ярилцлагад орж байгаа бөгөөд төгсөлт/виз батлагдсаны дараа шууд нүүх боломжтой.",
+      rights: "Бүх эрх хуулиар хамгаалагдсан.",
+      imprint: "Imprint (Impressum) | Data Privacy (Datenschutz)"
+    },
+    cv: "CV татах"
   }
 };
 
 export default function Portfolio() {
-  const [lang, setLang] = useState<'en' | 'jp' | 'de'>('en');
+  const [lang, setLang] = useState<'en' | 'jp' | 'de' | 'mn'>('en');
   const t = translations[lang];
 
   return (
@@ -154,17 +197,30 @@ export default function Portfolio() {
           </nav>
 
           <div className="flex items-center gap-4">
-            {/* Language Switcher */}
-            <div className="flex items-center gap-1 bg-slate-100 rounded-lg p-1">
-              {(['en', 'jp', 'de'] as const).map((l) => (
-                <button
-                  key={l}
-                  onClick={() => setLang(l)}
-                  className={`px-2 py-1 rounded-md text-xs font-bold uppercase transition ${lang === l ? 'bg-white shadow text-blue-600' : 'text-slate-500 hover:text-slate-700'}`}
-                >
-                  {l}
-                </button>
-              ))}
+
+            {/* Hover Language Switcher */}
+            <div className="relative group">
+              <button className="flex items-center gap-1 text-sm font-bold text-slate-600 hover:text-blue-600 transition px-2 py-1 rounded-md">
+                <Globe size={16} />
+                <span className="uppercase">{lang}</span>
+                <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
+              </button>
+
+              {/* Dropdown Menu */}
+              <div className="absolute right-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-right z-50">
+                <div className="bg-white border border-slate-200 rounded-lg shadow-xl overflow-hidden min-w-[120px] flex flex-col">
+                  {(['en', 'jp', 'de', 'mn'] as const).map((l) => (
+                    <button
+                      key={l}
+                      onClick={() => setLang(l)}
+                      className={`px-4 py-2 text-left text-sm font-medium hover:bg-slate-50 transition flex items-center justify-between ${lang === l ? 'text-blue-600 bg-blue-50' : 'text-slate-600'}`}
+                    >
+                      <span className="uppercase">{l}</span>
+                      {lang === l && <div className="w-1.5 h-1.5 rounded-full bg-blue-600"></div>}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
 
             <a href="/MainRirekiSho.xlsx" className="flex items-center gap-2 bg-slate-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-800 transition">
