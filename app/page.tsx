@@ -549,11 +549,11 @@ function CheckIcon() {
 
 function Bubbles() {
   // Generate random bubbles
-  const bubbles = Array.from({ length: 15 }).map((_, i) => ({
+  const bubbles = Array.from({ length: 30 }).map((_, i) => ({
     id: i,
     left: `${Math.random() * 100}%`,
-    animationDuration: `${15 + Math.random() * 15}s`,
-    animationDelay: `${Math.random() * 5}s`,
+    animationDuration: `${15 + Math.random() * 20}s`, // 15-35s duration
+    animationDelay: `-${Math.random() * 30}s`, // Negative delay to start mid-animation
     opacity: 0.1 + Math.random() * 0.2,
     size: `${4 + Math.random() * 6}px`
   }));
