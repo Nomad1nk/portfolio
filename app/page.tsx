@@ -427,8 +427,8 @@ export default function Portfolio() {
                 <div className="order-2 md:order-1 bg-white/5 rounded-2xl p-4 border border-white/10 shadow-2xl -rotate-1 hover:rotate-0 transition duration-500">
                   <div className="aspect-video bg-black rounded-lg flex items-center justify-center border-2 border-dashed border-gray-800 overflow-hidden">
                     <img
-                      src="/ecommerce.png"
-                      alt="LuxeCart eCommerce Interface"
+                      src="/luxeComm.png"
+                      alt="Lux eCommerce Interface"
                       className="object-cover w-full h-full opacity-80 hover:opacity-100 transition duration-500 hover:scale-105"
                     />
                   </div>
