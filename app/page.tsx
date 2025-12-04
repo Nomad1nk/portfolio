@@ -211,7 +211,7 @@ export default function Portfolio() {
   const t = translations[lang];
 
   return (
-    <div className="min-h-screen font-sans selection:bg-blue-100 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 animate-gradient-xy text-slate-800">
+    <div className="min-h-screen font-sans selection:bg-blue-200 bg-gradient-to-br from-indigo-100 via-purple-100 to-teal-100 animate-gradient-xy text-slate-800">
 
       {/* --- NAV / HERO SECTION --- */}
       <header className="bg-white border-b border-slate-200 sticky top-0 z-50 backdrop-blur-sm bg-white/90">
@@ -289,7 +289,7 @@ export default function Portfolio() {
         </section>
 
         {/* --- FEATURED PROJECTS --- */}
-        <section id="projects" className="py-20 bg-white border-y border-slate-100">
+        <section id="projects" className="py-20 bg-white/40 backdrop-blur-sm border-y border-white/50">
           <div className="max-w-5xl mx-auto px-6 space-y-24">
             <h2 className="text-sm font-bold text-blue-600 uppercase tracking-wider mb-8">{t.projects.title}</h2>
 
