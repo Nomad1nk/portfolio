@@ -10,6 +10,7 @@ A modern, responsive portfolio website built with **Next.js 14**, **Tailwind CSS
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
 - **Deployment:** Vercel (Recommended)
 
+  
 ## ✨ Features
 
 - **Responsive Design:** Fully optimized for mobile, tablet, and desktop.
