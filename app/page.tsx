@@ -37,7 +37,7 @@ const translations = {
         feat2: "Emotional Alignment: System prompts tuned for psychological support modalities (CBT/DBT principles)."
       },
       p4: {
-        title: "LuxeCart eCommerce",
+        title: "LUX eCommerce",
         status: "Completed",
         desc: "A high-performance headless eCommerce platform designed for luxury retail. Features a seamless checkout experience, real-time inventory management, and AI-driven product recommendations.",
         feat1: "Headless Architecture: Decoupled frontend (Next.js) and backend (Shopify API) for maximum flexibility and speed.",
@@ -87,7 +87,7 @@ const translations = {
         feat2: "感情調整: 心理的サポートのモダリティ(CBT/DBTの原則)に合わせて調整されたシステムプロンプト。"
       },
       p4: {
-        title: "LuxeCart eCommerce",
+        title: "LUXEcommerce",
         status: "完了",
         desc: "高級小売向けに設計された高性能ヘッドレスeコマースプラットフォーム。シームレスなチェックアウト体験、リアルタイムの在庫管理、AI主導の製品推奨機能を備えています。",
         feat1: "ヘッドレスアーキテクチャ: 柔軟性と速度を最大化するための分離されたフロントエンド(Next.js)とバックエンド(Shopify API)。",
@@ -137,7 +137,7 @@ const translations = {
         feat2: "Emotionale Ausrichtung: System-Prompts, die auf psychologische Unterstützungsmodalitäten (CBT/DBT-Prinzipien) abgestimmt sind."
       },
       p4: {
-        title: "LuxeCart eCommerce",
+        title: "LUXEcommerce",
         status: "Abgeschlossen",
         desc: "Eine leistungsstarke Headless-E-Commerce-Plattform für den Luxuseinzelhandel. Bietet ein nahtloses Checkout-Erlebnis, Bestandsmanagement in Echtzeit und KI-gesteuerte Produktempfehlungen.",
         feat1: "Headless-Architektur: Entkoppeltes Frontend (Next.js) und Backend (Shopify API) für maximale Flexibilität und Geschwindigkeit.",
@@ -187,7 +187,7 @@ const translations = {
         feat2: "Сэтгэл хөдлөлийн тохируулга: Сэтгэл зүйн дэмжлэг үзүүлэх аргууд (CBT/DBT зарчим)-д тохируулсан системийн промптууд."
       },
       p4: {
-        title: "LuxeCart eCommerce",
+        title: "LUXEcommerce",
         status: "Дууссан",
         desc: "Тансаг зэрэглэлийн жижиглэн худалдаанд зориулагдсан өндөр гүйцэтгэлтэй headless eCommerce платформ. Төлбөр тооцооны саадгүй туршлага, бодит цагийн бараа материалын менежмент, AI-д суурилсан бүтээгдэхүүний зөвлөмжийг агуулсан.",
         feat1: "Headless Архитектур: Уян хатан байдал, хурдыг дээд зэргээр нэмэгдүүлэхийн тулд салгагдсан frontend (Next.js) болон backend (Shopify API).",
@@ -434,7 +434,7 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              {/* PROJECT 4: LuxeCart eCommerce (NEW) */}
+              {/* PROJECT 4: Lux eCommerce */}
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1 bg-white/5 rounded-2xl p-4 border border-white/10 shadow-2xl -rotate-1 hover:rotate-0 transition duration-500">
                   <div className="aspect-video bg-black rounded-lg flex items-center justify-center border-2 border-dashed border-gray-800 overflow-hidden">
