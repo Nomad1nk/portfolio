@@ -326,6 +326,12 @@ export default function Portfolio() {
                     <TechBadge icon={Cpu} label="Python Flask" />
                     <TechBadge icon={MapPin} label="Leaflet / OSRM" />
                   </div>
+
+                  <div className="pt-4">
+                    <a href="https://github.com/Nomad1nk/RouteChecker" target="_blank" rel="noreferrer" className="inline-flex items-center text-white font-bold hover:text-gray-300 border-b-2 border-white hover:border-gray-300 pb-0.5 transition-colors">
+                      {t.projects.viewCode} <ExternalLink size={16} className="ml-1" />
+                    </a>
+                  </div>
                 </div>
                 <div className="bg-white/5 rounded-2xl p-4 border border-white/10 shadow-2xl rotate-1 hover:rotate-0 transition duration-500">
                   <div className="aspect-video bg-gray-900 rounded-lg flex items-center justify-center overflow-hidden relative border border-white/5">
@@ -412,7 +418,7 @@ export default function Portfolio() {
                   </div>
 
                   <div className="pt-4">
-                    <a href="https://github.com/Nomad1nk/MindSyncAI" target="_blank" rel="noreferrer" className="inline-flex items-center text-white font-bold hover:text-gray-300 border-b-2 border-white hover:border-gray-300 pb-0.5 transition-colors">
+                    <a href="https://github.com/Nomad1nk/AI-voice-MN-test-version" target="_blank" rel="noreferrer" className="inline-flex items-center text-white font-bold hover:text-gray-300 border-b-2 border-white hover:border-gray-300 pb-0.5 transition-colors">
                       {t.projects.viewCode} <ExternalLink size={16} className="ml-1" />
                     </a>
                   </div>
