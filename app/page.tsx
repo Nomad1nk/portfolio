@@ -473,7 +473,7 @@ export default function Portfolio() {
                   </div>
 
                   <div className="pt-4">
-                    <a href="#" className="inline-flex items-center text-white font-bold hover:text-gray-300 border-b-2 border-white hover:border-gray-300 pb-0.5 transition-colors">
+                    <a href="https://github.com/Nomad1nk/LuxEcommerce" target="_blank" rel="noreferrer" className="inline-flex items-center text-white font-bold hover:text-gray-300 border-b-2 border-white hover:border-gray-300 pb-0.5 transition-colors">
                       {t.projects.viewCode} <ExternalLink size={16} className="ml-1" />
                     </a>
                   </div>
