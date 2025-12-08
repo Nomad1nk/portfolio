@@ -410,6 +410,12 @@ export default function Portfolio() {
                     <TechBadge icon={Database} label="Vector DB" />
                     <TechBadge icon={Sparkles} label="Next.js" />
                   </div>
+
+                  <div className="pt-4">
+                    <a href="https://github.com/Nomad1nk/MindSyncAI" target="_blank" rel="noreferrer" className="inline-flex items-center text-white font-bold hover:text-gray-300 border-b-2 border-white hover:border-gray-300 pb-0.5 transition-colors">
+                      {t.projects.viewCode} <ExternalLink size={16} className="ml-1" />
+                    </a>
+                  </div>
                 </div>
                 <div className="bg-white/5 rounded-2xl p-4 border border-white/10 shadow-2xl rotate-1 hover:rotate-0 transition duration-500">
                   <div className="aspect-video bg-gray-900 rounded-lg flex items-center justify-center border-2 border-dashed border-white/10 overflow-hidden">
