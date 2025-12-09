@@ -46,9 +46,9 @@ const translations = {
       p5: {
         title: "BookingSystem",
         status: "In Development",
-        desc: "A comprehensive booking management system for scheduling appointments and managing resources. Designed for high availability and ease of use.",
-        feat1: "Real-time Availability: Dynamic calendar integration for instant slot booking and conflict resolution.",
-        feat2: "User Management: Role-based access control (RBAC) for admins, staff, and customers."
+        desc: "A comprehensive booking management system built with a modern full-stack architecture. Features multi-language support (MN, EN, JP), Stripe payments, and real-time scheduling.",
+        feat1: "Full-Stack Architecture: Next.js (React) frontend with Tailwind CSS v4, connected to a robust NestJS backend.",
+        feat2: "Advanced Features: Stripe payment integration, multi-language support (i18n), and role-based access control."
       },
       viewCode: "View Code on GitHub"
     },
@@ -530,9 +530,11 @@ export default function Portfolio() {
                   </div>
                   <div className="flex flex-wrap gap-2 pt-4">
                     <TechBadge icon={Calendar} label="Next.js" />
+                    <TechBadge icon={Server} label="NestJS" />
                     <TechBadge icon={Database} label="PostgreSQL" />
-                    <TechBadge icon={Users} label="Auth.js" />
-                    <TechBadge icon={Layout} label="Tailwind" />
+                    <TechBadge icon={Layout} label="Tailwind v4" />
+                    <TechBadge icon={CreditCard} label="Stripe" />
+                    <TechBadge icon={Globe} label="i18n" />
                   </div>
 
                   <div className="pt-4">
