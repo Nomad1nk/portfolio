@@ -103,9 +103,9 @@ const translations = {
       p5: {
         title: "BookingSystem",
         status: "開発中",
-        desc: "予約とリソース管理のための包括的な予約管理システム。高可用性と使いやすさを重視して設計されています。",
-        feat1: "リアルタイムの空き状況: 即時スロット予約と競合解決のための動的カレンダー統合。",
-        feat2: "ユーザー管理: 管理者、スタッフ、顧客のためのロールベースのアクセス制御(RBAC)。"
+        desc: "モダンなフルスタックアーキテクチャで構築された包括的な予約管理システム。多言語サポート(MN, EN, JP)、Stripe決済、リアルタイムスケジューリング機能を備えています。",
+        feat1: "フルスタックアーキテクチャ: Tailwind CSS v4を使用したNext.js (React)フロントエンドと、堅牢なNestJSバックエンドの連携。",
+        feat2: "高度な機能: Stripe決済統合、多言語サポート(i18n)、およびロールベースのアクセス制御。"
       },
       viewCode: "GitHubでコードを見る"
     },
@@ -160,9 +160,9 @@ const translations = {
       p5: {
         title: "BookingSystem",
         status: "In Entwicklung",
-        desc: "Ein umfassendes Buchungsmanagementsystem zur Terminplanung und Ressourcenverwaltung. Entwickelt für hohe Verfügbarkeit und Benutzerfreundlichkeit.",
-        feat1: "Echtzeit-Verfügbarkeit: Dynamische Kalenderintegration für sofortige Slot-Buchung und Konfliktlösung.",
-        feat2: "Benutzerverwaltung: Rollenbasierte Zugriffskontrolle (RBAC) für Administratoren, Mitarbeiter und Kunden."
+        desc: "Ein umfassendes Buchungsmanagementsystem, das auf einer modernen Full-Stack-Architektur basiert. Bietet mehrsprachige Unterstützung (MN, EN, JP), Stripe-Zahlungen und Echtzeit-Terminplanung.",
+        feat1: "Full-Stack-Architektur: Next.js (React) Frontend mit Tailwind CSS v4, verbunden mit einem robusten NestJS-Backend.",
+        feat2: "Erweiterte Funktionen: Stripe-Zahlungsintegration, mehrsprachige Unterstützung (i18n) und rollenbasierte Zugriffskontrolle."
       },
       viewCode: "Code auf GitHub ansehen"
     },
@@ -217,9 +217,9 @@ const translations = {
       p5: {
         title: "BookingSystem",
         status: "Хөгжүүлэлтийн шатанд",
-        desc: "Цаг захиалга болон нөөцийн менежментэд зориулсан цогц захиалгын систем. Өндөр хүртээмжтэй, ашиглахад хялбар байхаар бүтээгдсэн.",
-        feat1: "Бодит цагийн боломж: Шууд цаг захиалах, зөрчилдөөнийг шийдвэрлэх динамик хуанлийн интеграцчилал.",
-        feat2: "Хэрэглэгчийн менежмент: Админ, ажилчид болон үйлчлүүлэгчдэд зориулсан үүрэгт суурилсан хандалтын хяналт (RBAC)."
+        desc: "Орчин үеийн full-stack архитектураар бүтээгдсэн захиалгын удирдлагын цогц систем. Олон хэлний дэмжлэг (MN, EN, JP), Stripe төлбөр тооцоо, бодит цагийн хуваарь зэрэг боломжуудтай.",
+        feat1: "Full-Stack Архитектур: Tailwind CSS v4 ашигласан Next.js (React) frontend-ийг хүчирхэг NestJS backend-тэй холбосон.",
+        feat2: "Дэвшилтэт боломжууд: Stripe төлбөрийн интеграцчилал, олон хэлний дэмжлэг (i18n), болон үүрэгт суурилсан хандалтын хяналт."
       },
       viewCode: "GitHub дээр код үзэх"
     },
