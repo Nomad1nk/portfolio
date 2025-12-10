@@ -9,7 +9,7 @@ function ProjectCard({ project, isActive, isNeighbor, t, TechBadge, CheckIcon }:
         <div className={`w-full h-full p-4 transition-all duration-500`}>
             <div className={`grid lg:grid-cols-2 gap-6 lg:gap-12 items-center bg-white/80 dark:bg-black/40 backdrop-blur-md p-6 md:p-8 rounded-3xl border border-black/5 dark:border-white/10 shadow-2xl w-full h-full transition-all duration-500 overflow-y-auto scrollbar-hide ${isActive ? 'opacity-100 scale-100 blur-0' : 'opacity-40 scale-90 blur-sm grayscale'}`}>
 
-                {/* Text Content */}
+
                 <div className={`space-y-4 md:space-y-6 order-2 lg:order-1 transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0 lg:opacity-30'}`}>
                     <div className="flex items-center gap-3">
                         <h3 className="font-cartoon text-3d text-2xl md:text-4xl font-bold text-gray-900 dark:text-white tracking-wide">{project.title}</h3>
@@ -47,7 +47,7 @@ function ProjectCard({ project, isActive, isNeighbor, t, TechBadge, CheckIcon }:
                     </div>
                 </div>
 
-                {/* Image Content */}
+
                 <div className="order-1 lg:order-2 h-48 sm:h-64 lg:h-full flex items-center justify-center">
                     <div className="w-full h-full lg:aspect-video bg-gray-100 dark:bg-gray-900 rounded-xl flex items-center justify-center overflow-hidden relative border border-black/5 dark:border-white/10 shadow-lg group">
                         <img
@@ -63,27 +63,26 @@ function ProjectCard({ project, isActive, isNeighbor, t, TechBadge, CheckIcon }:
     );
 }
 
-// Dedicated Slide Component to handle complex transforms
+
 function CarouselSlide({ project, index, currentIndex, total, springX, t, TechBadge, CheckIcon }: any) {
-    // Calculate relative index for circular wrapping
+
     let relativeIndex = (index - currentIndex + total) % total;
     if (relativeIndex > total / 2) relativeIndex -= total;
 
-    // Spring for the base position (slide transition)
+
     const baseOffset = useSpring(relativeIndex * 65, { stiffness: 50, damping: 20 });
 
     useEffect(() => {
         baseOffset.set(relativeIndex * 65);
     }, [relativeIndex, baseOffset]);
 
-    // Combine transforms: Base Offset (%) + Mouse Parallax (px)
-    // We removed -50% because we are using mx-auto for centering
+
     const x = useTransform(
         [baseOffset, springX],
         ([base, spring]) => `calc(${base}% + ${spring}px)`
     );
 
-    // Visibility check
+
     const isVisible = Math.abs(relativeIndex) <= 2;
     if (!isVisible) return null;
 
@@ -91,7 +90,7 @@ function CarouselSlide({ project, index, currentIndex, total, springX, t, TechBa
         <motion.div
             className="absolute top-0 bottom-0 left-0 right-0 mx-auto w-[85%] md:w-[60%] h-full flex items-center justify-center pointer-events-none"
             style={{
-                x, // Apply the combined transform here
+                x,
                 zIndex: 20 - Math.abs(relativeIndex),
                 scale: relativeIndex === 0 ? 1 : 0.8,
                 opacity: relativeIndex === 0 ? 1 : 0.4,
@@ -121,7 +120,7 @@ export default function ProjectCarousel({ projects, t, TechBadge, CheckIcon }: a
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
 
-    // Mouse tracking for parallax
+
     const x = useMotionValue(0);
     const springX = useSpring(x, { stiffness: 100, damping: 30 });
     const containerRef = useRef<HTMLDivElement>(null);
@@ -159,7 +158,7 @@ export default function ProjectCarousel({ projects, t, TechBadge, CheckIcon }: a
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={handleMouseLeave}
         >
-            {/* 3D Stack Container */}
+
             <div className="relative w-full h-[600px] lg:h-[600px] flex items-center justify-center">
                 <AnimatePresence initial={false}>
                     {projects.map((p: any, i: number) => (
@@ -178,7 +177,7 @@ export default function ProjectCarousel({ projects, t, TechBadge, CheckIcon }: a
                 </AnimatePresence>
             </div>
 
-            {/* Navigation Buttons */}
+
             <button
                 onClick={prevSlide}
                 className="absolute left-2 md:left-10 z-30 p-2 md:p-3 bg-white/50 dark:bg-black/50 hover:bg-white/80 dark:hover:bg-white/20 rounded-full text-gray-900 dark:text-white backdrop-blur-md border border-black/5 dark:border-white/10 transition-all"
@@ -192,7 +191,7 @@ export default function ProjectCarousel({ projects, t, TechBadge, CheckIcon }: a
                 <ChevronRight size={24} />
             </button>
 
-            {/* Indicators */}
+
             <div className="absolute bottom-0 left-0 w-full flex justify-center gap-2 z-30">
                 {projects.map((_: any, i: number) => (
                     <button

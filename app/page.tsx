@@ -251,7 +251,7 @@ export default function Portfolio() {
   return (
     <div className={`min-h-screen font-sans selection:bg-cyan-500 transition-colors duration-500 ${isDarkMode ? 'dark' : ''} bg-gradient-to-br from-gray-50 via-sky-100 to-white dark:from-slate-900 dark:via-sky-950 dark:to-gray-900 animate-gradient-xy text-gray-900 dark:text-gray-200 relative overflow-hidden`}>
 
-      {/* --- BACKGROUND ANIMATION --- */}
+
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-blob"></div>
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-gray-500/10 rounded-full mix-blend-overlay filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
@@ -261,7 +261,7 @@ export default function Portfolio() {
 
       <div className="relative z-10">
 
-        {/* --- NAV / HERO SECTION --- */}
+
         <header className="bg-white/70 dark:bg-black/50 border-b border-black/5 dark:border-white/10 sticky top-0 z-50 backdrop-blur-md transition-colors duration-300">
           <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
             <div className="font-cartoon text-3d text-2xl tracking-wider text-gray-900 dark:text-white">Nomad<span className="text-gray-600 dark:text-gray-300">.Dev</span></div>
@@ -274,7 +274,7 @@ export default function Portfolio() {
 
             <div className="flex items-center gap-4">
 
-              {/* Theme Toggle */}
+
               <button
                 onClick={() => setIsDarkMode(!isDarkMode)}
                 className="p-2 rounded-full bg-gray-200 dark:bg-white/10 text-gray-800 dark:text-yellow-300 hover:bg-gray-300 dark:hover:bg-white/20 transition"
@@ -282,7 +282,7 @@ export default function Portfolio() {
                 {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
               </button>
 
-              {/* Hover Language Switcher */}
+
               <div className="relative group">
                 <button className="flex items-center gap-1 text-sm font-bold text-gray-700 dark:text-gray-200 hover:text-black dark:hover:text-white transition px-2 py-1 rounded-md">
                   <Globe size={16} />
@@ -290,7 +290,7 @@ export default function Portfolio() {
                   <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
                 </button>
 
-                {/* Dropdown Menu */}
+
                 <div className="absolute right-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-right z-50">
                   <div className="bg-gray-900 border border-white/10 rounded-lg shadow-xl overflow-hidden min-w-[120px] flex flex-col">
                     {(['en', 'jp', 'de', 'mn'] as const).map((l) => (
@@ -316,7 +316,7 @@ export default function Portfolio() {
         </header>
 
         <main>
-          {/* --- HERO --- */}
+
           <section id="about" className="pt-20 pb-32 px-6">
             <div className="max-w-3xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 dark:bg-white/5 text-gray-700 dark:text-gray-300 text-xs font-bold uppercase tracking-wide mb-6 border border-black/5 dark:border-white/10">
@@ -344,7 +344,7 @@ export default function Portfolio() {
             </div>
           </section>
 
-          {/* --- FEATURED PROJECTS --- */}
+
           <section id="projects" className="py-20 bg-white/30 dark:bg-black/20 backdrop-blur-sm border-y border-black/5 dark:border-white/5 overflow-hidden">
             <div className="w-full">
               <div className="max-w-5xl mx-auto px-6 mb-8">
@@ -437,7 +437,7 @@ export default function Portfolio() {
             </div>
           </section>
 
-          {/* --- TECH STACK --- */}
+
           <section id="skills" className="py-20 px-6">
             <div className="max-w-5xl mx-auto">
               <h2 className="font-cartoon text-3d text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center tracking-wide">{t.skills.title}</h2>
@@ -450,7 +450,7 @@ export default function Portfolio() {
             </div>
           </section>
 
-          {/* --- FOOTER / CONTACT --- */}
+
           <footer id="contact" className="bg-gray-100 dark:bg-black text-gray-500 py-20 px-6 border-t border-black/10 dark:border-white/10 transition-colors duration-500">
             <div className="max-w-3xl mx-auto text-center space-y-8">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{t.footer.title}</h2>
@@ -483,7 +483,7 @@ export default function Portfolio() {
   );
 }
 
-// --- Helper Components ---
+
 
 function TechBadge({ icon: Icon, label }: { icon: any, label: string }) {
   return (
@@ -515,36 +515,3 @@ function CheckIcon() {
     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg>
   )
 }
-
-/*
-function Bubbles() {
-  // Generate random bubbles
-  const bubbles = Array.from({ length: 30 }).map((_, i) => ({
-    id: i,
-    left: `${Math.random() * 100}%`,
-    animationDuration: `${20 + Math.random() * 40}s`, // 20-60s duration for longer travel
-    animationDelay: `-${Math.random() * 40}s`, // Negative delay to start mid-animation
-    opacity: 0.1 + Math.random() * 0.2,
-    size: `${10 + Math.random() * 30}px` // 10px - 40px size
-  }));
-
-  return (
-    <div className="absolute inset-0 w-full h-full pointer-events-none">
-      {bubbles.map((b) => (
-        <div
-          key={b.id}
-          className="absolute bottom-0 rounded-full bg-white animate-rise"
-          style={{
-            left: b.left,
-            width: b.size,
-            height: b.size,
-            opacity: b.opacity,
-            animationDuration: b.animationDuration,
-            animationDelay: b.animationDelay,
-          }}
-        ></div>
-      ))}
-    </div>
-  );
-}
-*/
