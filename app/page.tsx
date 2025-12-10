@@ -2,7 +2,10 @@
 
 import React, { useState } from 'react';
 import { Github, Linkedin, Mail, MapPin, ExternalLink, Download, Database, Layout, Server, Cpu, Camera, Eye, MousePointer2, Brain, MessageSquare, Sparkles, Globe, ChevronDown, ShoppingBag, CreditCard, Calendar, Users } from 'lucide-react';
-import ThreeBackground from './components/ThreeBackground';
+
+import dynamic from 'next/dynamic';
+
+const ThreeBackground = dynamic(() => import('./components/ThreeBackground'), { ssr: false });
 
 const translations = {
   en: {
