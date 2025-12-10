@@ -16,7 +16,7 @@ const translations = {
       titlePrefix: "Building Scalable",
       titleHighlight: "Microservices",
       titleSuffix: "& AI Solutions.",
-      description: "I am a Full-Stack Developer based in Japan, specializing in Next.js, Ruby on Rails, and Applied AI. I combine academic rigor with practical engineering to build systems that solve real-world logistics, interaction, and cognitive problems.",
+      description: "Multilingual Full-Stack Developer based in Japan. I specialize in architecting decoupled microservices using Next.js, Rails, and Python. With a high technical learning velocity and fluency in English (C1/C2), Japanese (N1/N2), and Mongolian, I am ready to deliver robust, scalable solutions for innovative teams locally and globally.",
       contact: "Contact Me",
       github: "GitHub"
     },
@@ -74,7 +74,7 @@ const translations = {
       titlePrefix: "スケーラブルな",
       titleHighlight: "マイクロサービス",
       titleSuffix: "とAIソリューションの構築",
-      description: "日本を拠点とするフルスタック開発者です。Next.js、Ruby on Rails、応用AIを専門としています。学術的な厳密さと実践的なエンジニアリングを組み合わせ、物流、インタラクション、認知の問題を解決するシステムを構築します。",
+      description: "日本（島根デザイン専門学校）を拠点とするマルチリンガルなフルスタック開発者。Next.js、Rails、Pythonを用いた疎結合マイクロサービスの設計を専門としています。高い技術習得速度を持ち、英語(C1/C2)、日本語(N1/N2)、モンゴル語に堪能。革新的なグローバルチームのために、堅牢でスケーラブルなソリューションを構築します。",
       contact: "お問い合わせ",
       github: "GitHub"
     },
@@ -132,7 +132,7 @@ const translations = {
       titlePrefix: "Entwicklung skalierbarer",
       titleHighlight: "Microservices",
       titleSuffix: "& KI-Lösungen",
-      description: "Ich bin ein Full-Stack-Entwickler mit Sitz in Japan, spezialisiert auf Next.js, Ruby on Rails und angewandte KI. Ich verbinde akademische Strenge mit praktischem Engineering, um Systeme zu bauen, die reale Probleme in Logistik, Interaktion und Kognition lösen.",
+      description: "Mehrsprachiger Full-Stack-Entwickler mit Sitz in Japan (Shimane IT Design College). Spezialisiert auf die Architektur entkoppelter Microservices mit Next.js, Rails und Python. Mit hoher technischer Auffassungsgabe und fließenden Kenntnissen in Englisch (C1/C2), Japanisch (N1/N2) und Mongolisch bin ich bereit, skalierbare Lösungen für innovative Teams weltweit zu liefern.",
       contact: "Kontaktieren Sie mich",
       github: "GitHub"
     },
@@ -190,7 +190,7 @@ const translations = {
       titlePrefix: "Өргөтгөх боломжтой",
       titleHighlight: "Микросервис",
       titleSuffix: "ба AI шийдлүүд.",
-      description: "Би Япон улсад суурилсан Full-Stack хөгжүүлэгч бөгөөд Next.js, Ruby on Rails, болон Applied AI чиглэлээр мэргэшсэн. Би академик мэдлэгээ практик инженерийн ур чадвартай хослуулан ложистик, харилцан үйлчлэл, танин мэдэхүйн бодит асуудлуудыг шийдвэрлэх системүүдийг бүтээдэг.",
+      description: "Япон улсад (Shimane IT Design College) суралцаж буй, олон хэлний мэдлэгтэй Full-Stack хөгжүүлэгч. Next.js, Rails, Python ашиглан бие даасан микросервис архитектур бүтээхээр мэргэшсэн. Шинэ технологийг хурдан сурах чадвар болон Англи (C1/C2), Япон (N1/N2), Монгол хэлний өндөр мэдлэгтэй бөгөөд дэлхийн түвшний багт үнэ цэнэ бүтээхэд бэлэн байна.",
       contact: "Надтай холбогдох",
       github: "GitHub"
     },
