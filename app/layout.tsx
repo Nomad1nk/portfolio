@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fredoka, Bangers } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const fredoka = Fredoka({ subsets: ["latin"], variable: '--font-fredoka' });
+const bangers = Bangers({ weight: "400", subsets: ["latin"], variable: '--font-bangers' });
 
 export const metadata: Metadata = {
     title: "Nomad Portfolio",
@@ -16,7 +17,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={inter.className}>{children}</body>
+            <body className={`${fredoka.variable} ${bangers.variable} font-sans`}>{children}</body>
         </html>
     );
 }

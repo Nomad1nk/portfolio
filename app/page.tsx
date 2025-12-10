@@ -258,7 +258,7 @@ export default function Portfolio() {
         {/* --- NAV / HERO SECTION --- */}
         <header className="bg-black/50 border-b border-white/10 sticky top-0 z-50 backdrop-blur-md">
           <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div className="font-bold text-xl tracking-tight text-white">Nomad<span className="text-gray-400">.Dev</span></div>
+            <div className="font-cartoon text-3d text-2xl tracking-wider text-white">Nomad<span className="text-gray-400">.Dev</span></div>
             <nav className="hidden md:flex space-x-8 text-sm font-medium text-gray-400">
               <a href="#about" className="hover:text-white transition">{t.nav.about}</a>
               <a href="#projects" className="hover:text-white transition">{t.nav.projects}</a>
@@ -312,7 +312,7 @@ export default function Portfolio() {
                 </span>
                 {t.hero.openToWork}
               </div>
-              <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight mb-6">
+              <h1 className="font-cartoon text-3d text-6xl md:text-7xl font-extrabold text-white tracking-wide mb-6">
                 {t.hero.titlePrefix} <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-white">{t.hero.titleHighlight}</span> {t.hero.titleSuffix}
               </h1>
               <p className="text-lg text-gray-400 mb-10 leading-relaxed">
@@ -333,12 +333,12 @@ export default function Portfolio() {
           {/* --- FEATURED PROJECTS --- */}
           <section id="projects" className="py-20 bg-black/20 backdrop-blur-sm border-y border-white/5">
             <div className="max-w-5xl mx-auto px-6 space-y-24">
-              <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-8 border-b border-white/10 pb-2 inline-block">{t.projects.title}</h2>
+              <h2 className="font-cartoon text-3d text-xl font-bold text-gray-500 uppercase tracking-wider mb-8 border-b border-white/10 pb-2 inline-block">{t.projects.title}</h2>
 
               {/* PROJECT 1: EcoRoute */}
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
-                  <h3 className="text-3xl font-bold text-white">{t.projects.p1.title}</h3>
+                  <h3 className="font-cartoon text-3d text-4xl font-bold text-white tracking-wide">{t.projects.p1.title}</h3>
                   <div className="prose text-gray-400">
                     <p>{t.projects.p1.desc}</p>
                     <ul className="space-y-2 mt-4">
@@ -392,7 +392,7 @@ export default function Portfolio() {
                 </div>
 
                 <div className="order-1 md:order-2 space-y-6">
-                  <h3 className="text-3xl font-bold text-white">{t.projects.p2.title}</h3>
+                  <h3 className="font-cartoon text-3d text-4xl font-bold text-white tracking-wide">{t.projects.p2.title}</h3>
                   <div className="prose text-gray-400">
                     <p>{t.projects.p2.desc}</p>
                     <ul className="space-y-2 mt-4">
@@ -426,7 +426,7 @@ export default function Portfolio() {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
                   <div className="flex items-center gap-3">
-                    <h3 className="text-3xl font-bold text-white">{t.projects.p3.title}</h3>
+                    <h3 className="font-cartoon text-3d text-4xl font-bold text-white tracking-wide">{t.projects.p3.title}</h3>
                     <span className="px-3 py-1 bg-white/10 text-white text-xs font-bold uppercase tracking-wide rounded-full border border-white/20">{t.projects.p3.status}</span>
                   </div>
                   <div className="prose text-gray-400">
@@ -480,7 +480,7 @@ export default function Portfolio() {
 
                 <div className="order-1 md:order-2 space-y-6">
                   <div className="flex items-center gap-3">
-                    <h3 className="text-3xl font-bold text-white">{t.projects.p4.title}</h3>
+                    <h3 className="font-cartoon text-3d text-4xl font-bold text-white tracking-wide">{t.projects.p4.title}</h3>
                     <span className="px-3 py-1 bg-white text-black text-xs font-bold uppercase tracking-wide rounded-full border border-gray-200">{t.projects.p4.status}</span>
                   </div>
                   <div className="prose text-gray-400">
@@ -516,7 +516,7 @@ export default function Portfolio() {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
                   <div className="flex items-center gap-3">
-                    <h3 className="text-3xl font-bold text-white">{t.projects.p5.title}</h3>
+                    <h3 className="font-cartoon text-3d text-4xl font-bold text-white tracking-wide">{t.projects.p5.title}</h3>
                     <span className="px-3 py-1 bg-white/10 text-white text-xs font-bold uppercase tracking-wide rounded-full border border-white/20">{t.projects.p5.status}</span>
                   </div>
                   <div className="prose text-gray-400">
@@ -564,7 +564,7 @@ export default function Portfolio() {
           {/* --- TECH STACK --- */}
           <section id="skills" className="py-20 px-6">
             <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-12 text-center">{t.skills.title}</h2>
+              <h2 className="font-cartoon text-3d text-4xl font-bold text-white mb-12 text-center tracking-wide">{t.skills.title}</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <SkillCard title="Frontend" skills={["React / Next.js", "TypeScript", "Tailwind CSS", "Leaflet.js"]} />
                 <SkillCard title="Backend" skills={["Ruby on Rails", "Python (Flask)", "Node.js", "REST APIs"]} />
