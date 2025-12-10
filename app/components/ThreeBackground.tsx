@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Points, PointMaterial } from '@react-three/drei';
+import { Points, PointMaterial, Cloud } from '@react-three/drei';
 
 function generateParticles(count: number) {
     const positions = new Float32Array(count * 3);
@@ -45,6 +45,7 @@ export default function ThreeBackground() {
         <div className="absolute inset-0 w-full h-full z-0">
             <Canvas camera={{ position: [0, 0, 1] }}>
                 <Stars />
+                <Cloud opacity={0.5} speed={0.4} bounds={[10, 2, 1.5]} segments={20} color="#cbd5e1" position={[0, 0, -5]} />
             </Canvas>
         </div>
     );
