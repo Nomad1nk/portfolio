@@ -21,7 +21,7 @@ function ProjectCard({ project, isActive, isNeighbor, t, TechBadge, CheckIcon }:
                     </div>
 
                     <div className="prose text-gray-800 dark:text-gray-200 text-sm md:text-lg font-medium">
-                        <p className="line-clamp-3 md:line-clamp-none">{project.desc}</p>
+                        <p className="">{project.desc}</p>
                         <ul className="space-y-2 mt-4 hidden lg:block">
                             <li className="flex items-start gap-3">
                                 <span className="bg-black/5 dark:bg-white/10 p-1 rounded text-gray-900 dark:text-white mt-1"><CheckIcon /></span>
